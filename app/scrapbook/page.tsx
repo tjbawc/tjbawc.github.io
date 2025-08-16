@@ -2,8 +2,8 @@ import { HeroBanner } from "../components/HeroBanner";
 import React from "react";
 
 const Entries = [
-  { imageUrl: "https://i.imgur.com/njHroyT.jpeg" , caption: "Dih", author: "mememe", date: "1/1/2025" },
-  { imageUrl: "https://i.imgur.com/njHroyT.jpeg" , caption: "more dih", author: "hi", date: "1/1/2025"}
+ // { imageUrl: "https://i.imgur.com/njHroyT.jpeg" , caption: "Dih", author: "mememe", date: "1/1/2025" },
+ // { imageUrl: "https://i.imgur.com/njHroyT.jpeg" , caption: "more dih", author: "hi", date: "1/1/2025"}
 ]
 
 // date will go with author (ex: "sigma boy, Jan 2024")
