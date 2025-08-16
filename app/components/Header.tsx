@@ -7,7 +7,7 @@ import { Leaf, Menu, X } from "lucide-react";
 const navLinks = [
   { href: "/events", label: "Events" },
   { href: "/scrapbook", label: "Scrapbook" },
-  { href: "/presentation", label: "Presentation" },
+  { href: "/presentation", label: "Presentations" },
   { href: "/resources", label: "Resources" },
   { href: "/checklist", label: "Checklist" },
 ];
