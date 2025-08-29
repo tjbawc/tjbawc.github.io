@@ -2,7 +2,7 @@ import { HeroBanner } from "../components/HeroBanner";
 import { SectionTitle } from "../components/SectionTitle";
 
 const upcomingPresentations = [
-  { title: "Test", author: "Author", date: "1/1/2025", link: "https://google.com"},
+  { title: "Club Intro", author: "James Lee", date: "9/5/2025", link: "https://google.com"},
   { title: "Test2", author: "Author2", date: "1/2/2025", link: "https://google.com"},
   { title: "Mockingbirds, Nightingales, and Other Birds Blah Blah Blah", author: "Author3thathasalongname", date: "12/12/2025", link: "https://google.com"},
 ];
