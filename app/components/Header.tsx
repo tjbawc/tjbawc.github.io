@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Leaf, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/events", label: "Events" },
+  // { href: "/events", label: "Events" },
   { href: "/scrapbook", label: "Scrapbook" },
   { href: "/presentation", label: "Presentations" },
   { href: "/resources", label: "Resources" },
