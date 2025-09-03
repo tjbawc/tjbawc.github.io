@@ -7,7 +7,7 @@ import { SectionTitle } from "./components/SectionTitle";
 
 const teamMembers = [
   { name: "James Lee", role: "President", imageUrl: "https://github.com/Hyper-caffeinated/nextjs-blog/blob/main/images/jamahes.jpg?raw=true" },
-  { name: "Peter Le", role: "Social Media Manager", imageUrl: "https://github.com/Hyper-caffeinated/nextjs-blog/blob/main/images/stupid%20ahh%20viet.png?raw=true" },
+  { name: "Peter Le", role: "Social Media Manager", imageUrl: "https://github.com/Hyper-caffeinated/nextjs-blog/blob/main/images/temp%20pic.png?raw=true" },
   { name: "Chris Yang", role: "Game Dev", imageUrl: "https://github.com/Hyper-caffeinated/nextjs-blog/blob/main/images/chrisy.png?raw=true" },
   { name: "Matthew Bu", role: "Senior Tech Manager", imageUrl: "https://placehold.co/300x300/d1c7b7/5c5243?text=Matthew+B." },
   { name: "Thomas Crosno", role: "Junior Web Dev", imageUrl: "https://github.com/Hyper-caffeinated/nextjs-blog/blob/main/images/thomar.png?raw=true" },
