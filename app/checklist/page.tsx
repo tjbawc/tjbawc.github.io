@@ -5,7 +5,7 @@ const Checklist = () => {
     <main>
       <HeroBanner
         title="Checklist"
-        subtitle ="Bird list idk"
+        subtitle ="SECRET PAGE!!! work in progress"
         imageUrl="https://i.imgur.com/Rhtg6Os.jpeg"
         height={40}
       />
