@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: "/nextjs-blog",
+  output: "export",
+  reactStrictMode: true,
 };
 
 export default nextConfig;
