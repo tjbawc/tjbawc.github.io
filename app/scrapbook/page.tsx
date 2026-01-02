@@ -6,7 +6,7 @@ const Entries = [
   { imageUrl: "https://i.imgur.com/njHroyT.jpeg" , caption: "Duck 2", author: "Also Thomas", date: "4/2/2025"}
 ]
 
-// date will go with author (ex: "sigma boy, Jan 2024")
+// date will go with author (ex: "mat bu, Jan 2024")
 const ScrapbookEntry = ({ imageUrl, caption, author, date }: { imageUrl: string; caption: string; author: string; date: string }) => (
   <div className="m-4 p-4 border-2 border-stone-600 bg-white rounded-lg shadow-lg max-w-xs">
     <img
