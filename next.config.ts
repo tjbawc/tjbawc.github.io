@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   basePath: "/nextjs-blog",
   assetPrefix: "/nextjs-blog", // test: should be isProd ? '/<repository-name>' : '',
