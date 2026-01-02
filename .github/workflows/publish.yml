@@ -24,41 +24,26 @@ jobs:
 
       - name: Setup Node
         uses: ./.github/workflows/setup-node
-
-      - name: Debug
+        
+      - name: Build with Next.js
         run: |
-          echo "-Root directory"
+          echo "Starting build..."
+          npm run build
+          echo "Build completed"
+          echo "Check for out dir:"
           ls -la
-          echo ""
-          echo "-Check for out directory"
           if [ -d "out" ]; then
-            echo "out directory EXISTS"
+            echo "out exists"
             ls -la out
           else
-            echo "out directory DOES NOT EXIST"
+            echo "out does not exist"
+            exit 1
           fi
-          echo ""
-          echo "-Checking for .next directory"
-          if [ -d ".next" ]; then
-            echo ".next directory EXISTS"
-            ls -la .next
-          else
-            echo ".next directory DOES NOT EXIST"
-          fi
-          echo ""
-          echo "-Package.json check"
-          cat package.json
-          echo ""
-          echo "-Next config check"
-          cat next.config.ts || cat next.config.mjs || cat next.config.js || echo "No config file found"
-
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
-
-      - name: Build with Next.js
-        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
