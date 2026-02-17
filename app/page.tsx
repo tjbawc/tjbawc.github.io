@@ -9,7 +9,10 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const carouselImages = ["/images/bawc pic 1.png", "/images/tj bawc 2.png"];
+const carouselImages = [
+  "https://raw.githubusercontent.com/tjbawc/tjbawc.github.io/main/images/bawc%20pic%201.png",
+  "https://raw.githubusercontent.com/tjbawc/tjbawc.github.io/main/images/tj%20bawc%202.png",
+];
 
 function Carousel({ className = "" }) {
   const [index, setIndex] = useState(0);
@@ -28,7 +31,7 @@ function Carousel({ className = "" }) {
           key={carouselImages[index]}
           src={carouselImages[index]}
           alt={`slide ${index + 1}`}
-          className="rounded-lg shadow-xl w-full border-4 border-white"
+          className="rounded-lg shadow-xl w-full h-128 object-cover border-4 border-white"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
