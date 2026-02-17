@@ -4,10 +4,58 @@
 "use client";
 import { HeroBanner } from "./components/HeroBanner";
 import { SectionTitle } from "./components/SectionTitle";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { useState, useEffect } from "react";
 
+const carouselImages = ["/images/bawc pic 1.png", "/images/tj bawc 2.png"];
+
+function Carousel({ className = "" }) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % carouselImages.length);
+    }, 5000); // interval (ms)
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      <AnimatePresence initial={false} mode="wait">
+        <motion.img
+          key={carouselImages[index]}
+          src={carouselImages[index]}
+          alt={`slide ${index + 1}`}
+          className="rounded-lg shadow-xl w-full border-4 border-white"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+        />
+      </AnimatePresence>
+
+      {/* optional prev/next controls */}
+      <button
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-white p-1 rounded-full"
+        onClick={() =>
+          setIndex(
+            (i) => (i - 1 + carouselImages.length) % carouselImages.length,
+          )
+        }
+      >
+        ‹
+      </button>
+      <button
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-white p-1 rounded-full"
+        onClick={() => setIndex((i) => (i + 1) % carouselImages.length)}
+      >
+        ›
+      </button>
+    </div>
+  );
+}
 const teamMembers = [
   {
     name: "James Lee",
@@ -81,11 +129,8 @@ const AboutSection = () => {
         <SectionTitle>About Our Club</SectionTitle>
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <img
-              src="https://placehold.co/600x400/a3bfb0/273d32?text=Picture"
-              alt="Picture alt text"
-              className="rounded-lg shadow-xl w-full border-4 border-white"
-            />
+            {}
+            <Carousel />
           </div>
           <div className="md:w-1/2">
             <p className="text-stone-600 mb-6 text-lg leading-relaxed">
@@ -156,7 +201,7 @@ const HeroSection = () => {
 const Page = () => {
   return (
     <main>
-      <HeroSection /> {}
+      <HeroSection />
       <AboutSection />
       <OfficersSection />
     </main>
