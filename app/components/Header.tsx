@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Leaf, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollDirection } from "../hooks/useScrollDirection";
 
@@ -33,7 +33,11 @@ export const Header = () => {
             aria-label="Go to homepage"
             className="hidden md:flex items-center space-x-2"
           >
-            <Leaf className="w-8 h-8 text-emerald-800 shrink-0" />
+            <img
+              src="https://github.com/tjbawc/tjbawc.github.io/blob/main/images/BAWC_Logo-modified.png?raw=true"
+              alt="TJ Bird and Wildlife Club"
+              className="w-8 h-8 shrink-0"
+            />
           </Link>
 
           {/* show hamburger on mobile */}
