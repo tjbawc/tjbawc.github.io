@@ -137,7 +137,7 @@ const AboutSection = () => {
           </div>
           <div className="md:w-1/2">
             <p className="text-stone-600 mb-6 text-lg leading-relaxed">
-              Welcome to the TJ BAWC!
+              Welcome to TJ BAWC!
             </p>
             <p className="text-stone-600 mb-6 text-lg leading-relaxed">
               Come visit us Friday 8A to go birdwatching and learn more about
